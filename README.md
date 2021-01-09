@@ -1,4 +1,4 @@
-# ANALYSIS AND PREDICTION ON BREAST CANCER(WISCONSIN) DATASET
+# Breast Cancer Prediction and Analysis
 ## Predict whether the cancer is benign or malignant
 
 **Author**: SHAILESH DHAMA
