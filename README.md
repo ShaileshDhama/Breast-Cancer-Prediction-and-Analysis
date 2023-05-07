@@ -100,6 +100,32 @@ The confusion matrix can compute several performance metrics, including accuracy
 
 These metrics provide insights into the model's performance, such as how often it correctly predicts malignant tumours, how often it incorrectly predicts benign tumours as malignant, and how often it correctly predicts benign tumours.
 
+### Step 14: Logistic regression with RFE
+In Step 14, we perform logistic regression with Recursive Feature Elimination (RFE) to select the most essential features for the predictive model. RFE is a feature selection algorithm that recursively eliminates the least essential features until the desired number of features is reached. The logistic regression model is then trained on the selected features.
+
+The logistic regression model is a binary classification model that estimates the probability of the input belonging to a particular class. The model predicts the probability of a binary response based on one or more predictor variables. The logistic regression model uses the logistic function, also known as the sigmoid function, to convert the continuous output into a probability value between 0 and 1. The logistic function is defined as follows:
+
+$$ p(x) = \frac{1}{1 + e^{-z}} $$
+
+Where $x$ is the input vector, $z$ is the linear combination of input variables and coefficients, and $p(x)$ is the probability of the input $x$ belonging to the positive class. The model coefficients are estimated using the maximum likelihood estimation method.
+
+The Recursive Feature Elimination (RFE) algorithm ranks each feature's importance in the dataset. The algorithm starts by training a logistic regression model on the full dataset and ranks the features based on their coefficient values. The feature with the lowest coefficient value is removed from the dataset, and the logistic regression model is trained on the reduced dataset. This process is repeated until the desired number of features is reached. The remaining features are considered the most important for the logistic regression model.
+
+After performing logistic regression with RFE, we evaluate the model's performance using various evaluation metrics such as accuracy, precision, recall, and F1-score. These metrics are computed using the confusion matrix, which is a table that summarizes the performance of a binary classification model. The confusion matrix consists of four metrics: true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN). Using these metrics, we can compute the following evaluation metrics:
+
+- Accuracy: the proportion of correct predictions from the total number of predictions.
+$$ Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $$
+
+- Precision: the proportion of true positives from the total number of positive predictions.
+$$ Precision = \frac{TP}{TP + FP} $$
+
+- Recall (Sensitivity): the proportion of true positives from the total number of actual positives.
+$$ Recall = \frac{TP}{TP + FN} $$
+
+- F1-score: the harmonic mean of precision and recall, where a score of 1 indicates perfect precision and recall.
+$$ F1-score = 2 \times \frac{Precision \times Recall}{Precision + Recall} $$
+
+These evaluation metrics are used to assess the performance of the logistic regression model with RFE and to compare it with other models in subsequent steps.
 ## RESULTS :
 
 #### Data distribution
